@@ -1,8 +1,8 @@
 # Idade BPM
 # Ate 2 anos > 120 a 140
 # De 8 anos ate 17 anos > 80 a 100
-# Adulto sedentario > 70 a 80
-# Idosos 50 a 60
+# De 18 anos ate 59 anos > 70 a 80
+# Acima de 60 anos > 50 a 60
 
 bpm = int(input("Insira o batimento cardiaco")) # Coletando batimentos
 idade = int(input("Insira sua idade")) # Coletando idade
@@ -32,10 +32,10 @@ elif idade >= 8:
         else:
             print("Batimentos considerados menores que a média")
 
-    # Idade de 18 a 60 anos
+    # Idade de 18 a 50 anos
 
     if idade >= 18:
-        if idade <= 50:
+        if idade <= 59:
 
             # Checando batimentos de 70 a 80
 
@@ -50,8 +50,8 @@ elif idade >= 8:
         # Considerando o paciente idoso já que ele não tem idade menor a 50 anos
 
         else:
-            bpm >= 50
-            if bpm <= 60:
+            bpm >= 60
+            if bpm >= 60:
                 if bpm <= 80:
                     print("Batimentos considerados normais")
                 else:
