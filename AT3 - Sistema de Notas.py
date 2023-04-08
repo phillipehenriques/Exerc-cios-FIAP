@@ -1,28 +1,43 @@
+#defininido texto de números impares
 
+print("Por favor, digite as notas dos alunos impares em sequência: ")
 
-alunos_impares = int(input("Bem vindo a central das notas! \n Por favor, digite a nota do aluno com número impar"))
-alunos_pares = int(input("Agora por favor, digite a nota do aluno com número par"))
+#definindo valor das variáveis
 
-list_impares = []
-list_pares = []
+alunos_impares = 0
+alunos_pares = 0
 
-#----------------------------
+# Criando Script dos números impares
 
-if alunos_impares /1:
-    alunos_impares = int(input("Bem vindo a central das notas! \n Por favor, digite a nota do aluno com número impar"))
-if alunos_impares /2:
-    alunos_pares = int(input("Agora por favor, digite a nota do aluno com número par"))
+for i in range (1, 50, 2):
+    nota = float(input("Aluno de número {}: ".format(i)))
+    alunos_impares += nota
 
+# tirando média dos números impares
 
-#----------------------------
+media_impar = alunos_impares / 25
 
-if alunos_pares < 50:
-    list_pares = int(input("Digite a nota do aluno com número par"))
+print("**************************************")
+
+# Criando Script dos números pares
+
+for i in range (2, 51, 2):
+    nota = float(input("Aluno de número {}: ".format(i)))
+    alunos_pares += nota
+
+# tirando média dos números pares
+
+media_par = alunos_pares / 25
+
+print("**************************************")
+
+# printando o resultado da maior média entre os números
+
+if media_impar > media_par:
+    maior_media = media_impar
+    print("Parabéns alunos ímpares! Vocês tiveram a maior média: {:.2f}!".format(media_impar))
+elif media_impar < media_par:
+    maior_media = media_par
+    print("Parabéns alunos pares! Vocês tiveram a maior média: {:.2f}!".format(media_par))
 else:
-    print("Todas as notas preenchidas")     
-
-if alunos_impares < 49:
-    list_impares = int(input("Digite a nota do aluno com número inpar"))
-else:
-    print("Todas as notas preenchidas") 
-
+    print("Deu emparte .. As notas são iguais!")

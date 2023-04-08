@@ -1,23 +1,33 @@
 # sistema de votação
 
-val1 = int(input("Digite o valor de votos da segunda-feira"))
-val2 = int(input("Digite o valor de votos da terça-feira"))
-val3 = int(input("Digite o valor de votos da quarta-feira"))
-val4 = int(input("Digite o valor de votos da quinta-feira"))
-val5 = int(input("Digite o valor de votos da sexta-feira"))
+v_segunda = int(input("Digite o valor de votos da segunda-feira: "))
+v_terça = int(input("Digite o valor de votos da terça-feira: "))
+v_quarta = int(input("Digite o valor de votos da quarta-feira: "))
+v_quinta = int(input("Digite o valor de votos da quinta-feira: "))
+v_sexta = int(input("Digite o valor de votos da sexta-feira: "))
 
-list = [val1, val2, val3, val4, val5]
-dias_da_semana = ["Segunda-feira", "Terça-Feira", "quarta-feira", "Quinta-Feira", "Sexta-feira"]
+# definindo variáveis 
+
+maioria = v_segunda
+escolhido = "A maioria dos votos são para Segunda-feira"
 
 # script
 
-maior_valor_da_lista = 0
-for valor in list:
-    if valor > maior_valor_da_lista:
-        maior_valor_da_lista = valor
-        
-posicao_do_maior_valor = list.index(maior_valor_da_lista)
+if v_terça > maioria:
+    escolhido = "A maioria dos votos são para Terça-feira"
+    maioria = v_terça
 
-# printando resultado
+if v_quarta > maioria:
+    escolhido = "A maioria dos votos são para Quarta-feira"
+    maioria = v_quarta
 
-print(dias_da_semana[posicao_do_maior_valor])
+if v_quinta > maioria:
+    escolhido = "A maioria dos votos são para Quinta-feira"
+    maioria = v_quinta
+
+if v_sexta > maioria:
+    escolhido = "A maioria dos votos são para Sexta-feira"
+    maioria = v_sexta
+
+else:
+    print("O dia escolhido foi {}, com {} votos!".format(escolhido, maioria))
